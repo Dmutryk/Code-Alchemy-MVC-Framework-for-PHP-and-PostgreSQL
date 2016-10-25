@@ -1,0 +1,36 @@
+<div
+        class="order-confirmation step-4"
+        data-is-ready=""
+        data-unready-action="scroll-here"
+        data-unready-message="Debes aceptar todos los terminos y las condiciones para realizar el pedido"
+        >
+
+    <div style="display:none;" class="row order-alert">
+        <div class="col-lg-12">
+
+            <div class="alert alert-danger">
+                <span class="message"></span>
+            </div>
+        </div>
+    </div>
+
+    <form onsubmit="return caShopping.place_order( $(this) )">
+
+        <div class="form-group">
+
+            <input class="checkbox-picker required-acceptance" type="checkbox">
+
+            <span>Afirmo que me pedido se entregará el {{formatted_delivery_date}}</span>
+
+
+        </div>
+
+        <div class="form-group">
+
+            <button type="submit" class="btn btn-primary">Realizar Pedido</button>
+
+        </div>
+    </form>
+
+
+</div>

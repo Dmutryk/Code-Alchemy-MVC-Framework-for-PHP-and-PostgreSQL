@@ -1,0 +1,39 @@
+<td>
+    <!-- View Record -->
+    <a href="/parnassus/view/{{uri}}/{{model_id}}">
+        <i class="fa fa-eye fa-2x"></i>
+    </a>
+
+    <!-- Edit Record -->
+    <a href="/parnassus/models/{{uri}}/{{model_id}}/edit">
+        <i title="Edit Record" class="fa fa-pencil fa-2x"></i>
+    </a>
+
+    <!-- Copy Record to new one with existing values -->
+    <a href="/parnassus/add/{{uri}}/{{model_id}}">
+        <i title="Copy Record" class="fa fa-files-o fa-2x"></i>
+    </a>
+
+    <!-- Delete record -->
+    <i title="{{title}}" style="cursor:pointer" data-id="{{model_id}}"
+       class="pointer fa {{delete_icon}} delete-item id-{{model_id}} fa-2x">
+    </i>
+
+    <!-- Sort record -->
+    <i title="" style="cursor:pointer" data-id="{{model_id}}"
+       class="pointer fa fa-sort sort-helper id-{{model_id}} fa-2x">
+    </i>
+
+    <!-- Test email template -->
+    {{#if is_email_template}}
+        <a data-template-key="{{template_key}}" onclick="$('#test-send').attr('data-template-key',$(this).attr('data-template-key'));" data-toggle="modal" data-target="#test-send" href="#" class="test-send" data-id="{{id}}">
+            <i class="fa fa-paper-plane fa-2x test-send" ></i>
+        </a>
+    {{/if}}
+
+    {{#each custom_actions}}
+
+        <a title="{{tooltip}}" href="{{action}}?model_id={{../model_id}}"><i class="fa {{fontawesome_class}} fa-2x"></i></a>
+
+    {{/each}}
+</td>

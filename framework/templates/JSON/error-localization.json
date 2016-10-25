@@ -1,0 +1,25 @@
+{
+
+  "errors": [
+
+    {
+
+      "message": "These fields are required",
+
+        "es": "Estes campos son obligatorios"
+
+    },
+
+
+    {
+
+      "message": "This field is required",
+
+      "es": "Este campo es obligatorio"
+
+    }
+
+
+  ]
+
+}

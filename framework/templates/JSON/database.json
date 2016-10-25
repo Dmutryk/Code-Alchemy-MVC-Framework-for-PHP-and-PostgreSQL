@@ -1,0 +1,26 @@
+{
+    "mysql" : {
+        "hostname":"",
+
+        "database":"",
+
+        "username":"",
+
+        "password":"",
+
+        "is_main": true
+    },
+    "pgsql" : {
+        "hostname":"",
+
+        "database":"",
+
+        "username":"",
+
+        "password":"",
+
+        "is_main": false
+    }
+
+
+}

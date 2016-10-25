@@ -1,0 +1,12 @@
+-----------------------------------------------------------
+------------------         BASE        --------------------
+-----------------------------------------------------------
+
+1. If not exist, create a file composer.json
+
+2. In the composer.json, add the follow line:
+      "basecrm/basecrm-php" : "1.2.0"
+
+3. In the directory write composer install
+
+Note: composer should are installed.

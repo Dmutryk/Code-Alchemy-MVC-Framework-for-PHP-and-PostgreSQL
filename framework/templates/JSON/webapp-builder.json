@@ -1,0 +1,10 @@
+{
+    "services": [
+        "user",
+        "email_template",
+        "website_page",
+        "menu_item",
+        "page_section",
+        "website_image"
+    ]
+}

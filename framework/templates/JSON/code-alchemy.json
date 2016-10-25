@@ -1,0 +1,52 @@
+{
+    "name": "Code_Alchemy-Framework",
+
+    "version" : "1.0.2",
+
+    "application" : {
+
+        "debug": false
+
+    },
+
+    "run-mode": "development",
+
+    "namespace": "__namespace__",
+
+    "signup": {
+
+        "auto-login": true,
+
+        "redirect": "/"
+
+    },
+
+    "models": {
+
+        "comment_1": "Set below to true, to automatically create missing Dynamic Models in models.json",
+
+        "auto-create-dynamic-models": true
+
+    },
+
+    "multi-language-support": {
+
+        "comment": "Use this section to enable MLS and set languages.  URI will automatically forward to default language URI.",
+
+        "enabled": false,
+        "languages": [
+            {
+                "language": "English",
+                "uri": "en",
+                "locale": "en_US",
+                "default": true
+            },
+            {
+                "language": "Spanish",
+                "uri": "es",
+                "locale": "es_CO"
+            }
+        ]
+    }
+
+}

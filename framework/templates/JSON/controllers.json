@@ -1,0 +1,97 @@
+{
+    "routes": {
+
+        "home": {
+
+            "layout":"home",
+
+            "theme": "__theme_name__",
+
+            "theme-root": "__theme_root__"
+
+        },
+
+        "signup": {
+
+            "layout": "login",
+
+            "theme": "__theme_name__",
+
+            "theme-root": "__theme_root__"
+
+        },
+
+        "rest": {
+
+            "type": "rest-api",
+
+            "controller": "My_REST_API"
+        },
+
+        "register-user": {
+
+            "comment": "This controller is used for cross-domain login from AngularJS client",
+
+            "type": "register-user",
+
+            "controller": "Register_User"
+
+        },
+
+
+        "login-check": {
+
+            "comment": "This controller is used for cross-domain login status check from AngularJS client",
+
+            "type": "login-check",
+
+            "controller": "Login_Check"
+
+        },
+
+        "do-logout": {
+
+            "comment": "This controller is used for cross-domain logout from AngularJS client",
+
+            "type": "do-logout",
+
+            "controller": "Do_Logout"
+
+        },
+
+
+        "do-signin": {
+
+            "comment": "This controller is used for cross-domain login from AngularJS client",
+
+            "type": "do-signin",
+
+            "controller": "Do_Signin"
+
+        },
+
+        "setup-management": {
+
+            "type": "setup-management",
+
+            "controller": "Setup_Management"
+        },
+
+
+
+
+        "*": {
+
+            "layout":"*",
+
+            "theme": "__theme_name__",
+
+            "theme-root": "__theme_root__"
+
+        }
+    },
+
+    "data": {
+
+    }
+}

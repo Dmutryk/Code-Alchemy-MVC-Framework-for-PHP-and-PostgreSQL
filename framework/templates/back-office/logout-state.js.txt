@@ -1,0 +1,25 @@
+/**
+ * Logout state, add to app.states.js
+ */
+.state("logout", {
+    url: "/logout",
+    templateUrl: 'app/components/pages/logoutView.html',
+    controller: 'logoutCtrl',
+    resolve: {
+
+        deps: ['$ocLazyLoad', '$http', '$state','dataservice', function($ocLazyLoad,$http,$state,dataservice) {
+
+            return $ocLazyLoad.load([
+                'lazy_iCheck',
+                'app/components/pages/logoutController.js'
+            ]);
+
+
+
+        }]
+    },
+    data: {
+        pageTitle: 'Logout'
+    }
+
+})

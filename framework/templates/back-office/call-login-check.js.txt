@@ -1,0 +1,6 @@
+/**
+ * Replace at top of each state dependency in app.states.js where login is required
+ */
+deps: ['$ocLazyLoad', '$http', '$state','dataservice',function($ocLazyLoad,$http,$state,dataservice) {
+
+    loginCheck($state,$http,dataservice);

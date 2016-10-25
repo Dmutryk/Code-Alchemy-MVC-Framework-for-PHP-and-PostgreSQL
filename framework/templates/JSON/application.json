@@ -1,0 +1,8 @@
+{
+    "name": "My Application",
+
+    "comment": "This is your local environment-specific configuration.  We don't recommend including this file in your Git",
+
+    "run-mode": "development"
+
+}

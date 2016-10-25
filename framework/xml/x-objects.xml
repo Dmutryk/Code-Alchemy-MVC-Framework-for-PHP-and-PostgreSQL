@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x-objects>
+	<appname>xobjects</appname>
+	<classname_case>all_lowercase</classname_case>
+	<debugger>
+		<status>disabled</status>
+		<level>1</level>
+	</debugger>
+	<site>
+		<environment>
+            <label>workstation</label>
+        </environment>
+		<controllers>
+			<missing_redirect>page/e404</missing_redirect>
+		</controllers>
+	</site>
+</x-objects>

@@ -1,0 +1,39 @@
+{
+
+  "module": "Payment-Alchemy",
+
+  "version": "1.0.0",
+
+  "configuration": {
+
+    "broker": "PayU",
+
+    "installed-in": "AddOns\\Payments\\PayU_Latam",
+
+    "endpoints": {
+      "test": {
+        "payments": "https://stg.api.payulatam.com/payments-api/4.0/service.cgi",
+        "reports": "https://stg.api.payulatam.com/reports-api/4.0/service.cgi",
+        "rest": "https://stg.api.payulatam.com/payments-api/rest/v4.3/"
+      },
+      "live": {
+        "payments": "https://api.payulatam.com/payments-api/4.0/service.cgi",
+        "reports": "https://api.payulatam.com/reports-api/4.0/service.cgi",
+        "rest": "https://api.payulatam.com/payments-api/rest/v4.3/"
+
+      }
+
+    },
+
+    "api-key": "",
+
+    "api-login": "",
+
+    "language": "en",
+
+    "merchant-id": "",
+
+    "account-id": ""
+
+  }
+}

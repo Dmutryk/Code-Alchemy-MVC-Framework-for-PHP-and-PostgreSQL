@@ -1,0 +1,20 @@
+CREATE TABLE `__database_name__`.`__table_name__`(
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `sortable_id` int(11) DEFAULT NULL,
+  `tipo` enum('teléfono','móvil','correo_electrónico','dirección','facebook','twitter','instagram','linkedin','youtube','id_klob','nit','nombre') NOT NULL,
+  `etiqueta` varchar(30) DEFAULT NULL,
+  `valor` varchar(100) NOT NULL,
+  `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_by` int(11) DEFAULT NULL,
+  `last_modified_date` datetime DEFAULT NULL,
+  `last_modified_by` int(11) DEFAULT NULL,
+  `is_deleted` tinyint(1) DEFAULT '0',
+  `deleted_date` datetime DEFAULT NULL,
+  `deleted_by` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `IDX_unique_value` (`valor`),
+  UNIQUE KEY `IDX_unique_etiqueta` (`etiqueta`),
+  KEY `IDX_contact_info_created_by` (`created_by`),
+  KEY `IDX_contact_info_last_mf_by` (`last_modified_by`),
+  KEY `IDX_contact_info_deleted_by` (`deleted_by`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;

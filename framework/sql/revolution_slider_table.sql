@@ -1,0 +1,20 @@
+CREATE TABLE `__database_name__`.`__table_name__`(
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `sortable_id` int(11) DEFAULT NULL,
+  `transition` enum('slideleft','slideright') DEFAULT 'slideleft',
+  `image_filename` varchar(100) DEFAULT NULL,
+  `headline` varchar(50) NOT NULL,
+  `caption` text,
+  `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_by` int(11) DEFAULT NULL,
+  `last_modified_date` datetime DEFAULT NULL,
+  `last_modified_by` int(11) DEFAULT NULL,
+  `is_deleted` tinyint(1) DEFAULT '0',
+  `deleted_date` datetime DEFAULT NULL,
+  `deleted_by` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `IDX_unique_filename` (`image_filename`),
+  KEY `IDX_photo_created_by` (`created_by`),
+  KEY `IDX_photo_last_mf_by` (`last_modified_by`),
+  KEY `IDX_photo_deleted_by` (`deleted_by`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;

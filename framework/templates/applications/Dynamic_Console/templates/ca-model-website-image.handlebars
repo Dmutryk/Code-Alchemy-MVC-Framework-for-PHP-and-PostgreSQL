@@ -1,0 +1,40 @@
+<div class="ca-model-website-image">
+
+    <div
+            style="display:{{preview_image_display_token}}"
+
+            class="image-preview-pane relative-wrapper clearfix pull-right">
+
+        <img class="edit-model-preview" src="{{image_filename_url}}"/>
+
+        <a href="#" style="left: 5px; top: 5px;" class="absolute "
+
+           onclick="return webDirector.remove_website_image( '{{model_name}}', '{{model_id}}', '{{field_name}}');">
+
+            <i style="color: darkred;" class="fa fa-trash fa-2x danger"></i>
+
+        </a>
+
+    </div>
+
+    <div class="col-lg-7">
+
+        <div class="relative-wrapper clearfix">
+
+            <input data-field-name="{{field_name}}" placeholder="{{placeholder}}" class="image-typeahead"/>
+
+            <a style="right: 75px; top: 15px;" class="absolute" href="#" onclick="return webDirector.clear_website_image_typeahead( '{{field_name}}');">
+
+                <i class="fa fa-undo"></i>
+
+            </a>
+
+        </div>
+
+        <input type="hidden" name="{{field_name}}" value="{{website_image_id}}"/>
+
+        <p class="image-advisory" style="display:none; font-size: 8pt">{{image_advisory}}</p>
+
+    </div>
+
+</div>

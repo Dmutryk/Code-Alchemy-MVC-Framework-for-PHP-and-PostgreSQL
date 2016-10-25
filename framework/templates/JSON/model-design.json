@@ -1,0 +1,44 @@
+{
+  "models":
+  [
+    {
+
+      "name": "model_one",
+      "template" : "intersection",
+      "intersects": "table1,table2",
+      "custom_fields":{
+        "title":{
+          "type": "varchar",
+          "length": 100,
+          "is_null": true,
+          "default": "Test",
+          "is_mls": true
+        }
+      }
+    },
+    {
+
+      "name": "model_two",
+      "template" : "blank",
+      "custom_fields":{
+        "is_ok":{
+          "type": "boolean",
+          "default": true
+        }
+      }
+    }
+
+  ],
+
+  "settings":{
+
+    "mls": {
+      "languages": [
+        "en","es","fr"
+      ]
+    }
+
+  }
+
+
+}

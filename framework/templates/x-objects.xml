@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- X-Objects 1.x Main Application and Container Configuration File.
+This file is required for all X-Objects instances -->
+<x-objects>
+
+	<!-- name of app instance to load.  Name must match name of main application PHP class -->
+	<appname>_appname_</appname>
+
+    <!-- Controls the actions of global Triggers, which can be invoked after the
+    Creation, Modification, or Deletion of any Model/Business Object -->
+    <triggers>
+        <!-- automatically exclude the following Model Classes from any triggers -->
+        <exclude>bm_log_event,bm_log</exclude>
+    </triggers>
+
+    <!-- Allows enablement of Debugging, either on-screen, or to a target, and also
+    allows setting of the type and level of debugging -->
+	<debugger>
+		<status>disabled</status>
+		<level>1</level>
+	</debugger>
+
+    <!-- Sets the primary (but optional) database connection parameters for the app -->
+    <database>
+	    <database>_appname_</database>
+		<host>localhost</host>
+		<username>root</username>
+	    <password>root</password>
+		<socket></socket>
+	    <port>3306</port>
+	</database>
+
+	<!-- Allows setting of Site Configuration for the entire application -->
+	<site>
+        <!-- user-provided label for environment, allows for code branching -->
+		<environment>development</environment>
+        <!-- actions for controllers -->
+		<controllers>
+
+            <!-- redirect here, when a page is missing -->
+			<missing_redirect>page/e404</missing_redirect>
+
+		</controllers>
+	</site>
+
+    <!-- If using Fineupload Ajax uploader, you can place settings here -->
+    <fineuploader>
+        <!-- default directory to upload files -->
+        <upload_directory>/user_images/</upload_directory>
+        <!-- indicate a database source for allowd upload types -->
+        <load_types_from>table_name:name='uploadify_types'</load_types_from>
+    </fineuploader>
+
+    <!--If using First Data integration, place all settings here -->
+    <FirstData>
+        <!-- settings for test environment -->
+        <test>
+            <host>api.demo.globalgatewaye4.firstdata.com</host>
+            <protocol>https://</protocol>
+            <uri>/transaction/v12</uri>
+            <hmackey>hmackey</hmackey>
+            <keyid>00000</keyid>
+            <gatewayid>AC0000-00</gatewayid>
+            <password>dfwerrbcvbc</password>
+        </test>
+        <!-- settings for live environment -->
+        <live>
+            <host>api.globalgatewaye4.firstdata.com</host>
+            <protocol>https://</protocol>
+            <uri>/transaction/v12</uri>
+            <hmackey>hmackey</hmackey>
+            <keyid>111111</keyid>
+            <gatewayid>B1111-11</gatewayid>
+            <password>cvxvpoiuerw</password>
+        </live>
+    </FirstData>
+
+    <!-- Settings for ImageMagick and phMagick go here-->
+    <imagemagick>
+        <enabled>no</enabled>
+        <binpath>C:/progra~1/ImageMagick-6.8.7-Q16</binpath>
+    </imagemagick>
+
+    <!-- settings for libre office -->
+    <libreoffice>
+        <binary>/opt/libreoffice4.0/program/soffice</binary>
+    </libreoffice>
+
+    <!-- settings for ffmpeg video conversion -->
+    <ffmpeg>
+        <!-- directory where binaries are located on server -->
+        <directory>/usr/bin/</directory>
+    </ffmpeg>
+
+    <!-- use these settings for PHPMailer -->
+    <phpmailer>
+        <mailer>smtp</mailer>
+        <hostname>smtp.host.com</hostname>
+        <host>smtp.host.com</host>
+        <port>25</port>
+        <smtp_secure>no</smtp_secure>
+        <smtp_auth>yes</smtp_auth>
+        <username>no-reply@host.com</username>
+        <password>werewrewrewrewfdgdf</password>
+    </phpmailer>
+
+    <facebook>
+        <app_id>Replace with your App Id in x-objects.xml</app_id>
+    </facebook>
+</x-objects>

@@ -1,0 +1,96 @@
+<form
+        onsubmit="return caShopping.save_address( $(this) );"
+        class="form-horizontal delivery-details step-3"
+        data-is-ready=""
+        data-unready-action="scroll-here"
+        data-unready-message="Selecciona una dirección para entregar a domicilio, o agregar una nueva dirección"
+        >
+    <fieldset>
+        <legend>Datos de Facturación</legend>
+
+        <!-- Selection of Address -->
+        <div class="form-group">
+            <label class="col-lg-3 control-label" for="inputEmail">Elegir Dirección Guardada</label>
+            <div class="col-lg-5">
+                <select id="choose-address" class="form-control" onchange="caShopping.select_address( $(this) );">
+
+                    <option value="">Seleccionar Dirección</option>
+                        {{#each delivery_addresses}}
+                            <option value="{{id}}">{{address_name}}</option>
+                        {{/each}}
+                    <option class="{{inverse_has_no_addresses_class}}" value="">Agregar una dirección</option>
+                </select>
+            </div>
+            <div class="col-lg-4">
+                <a onclick="caShopping.show_add_address()"  class="{{has_no_addresses_class}} btn btn-small btn-primary add-address">Agregar una Dirección</a>
+
+            </div>
+        </div>
+
+        <div class="add-address" style="display:none;">
+
+            <div class="form-group">
+                <label class="col-lg-3 control-label" for="inputEmail">Nombre *</label>
+                <div class="col-lg-9">
+                    <input name="first_name" type="text" placeholder="Nombre" id="inputEmail" class="form-control clearable" value="{{first_name}}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label" for="inputEmail">Apellido *</label>
+                <div class="col-lg-9">
+                    <input name="last_name" type="text" placeholder="Apellido" id="inputEmail" class="form-control clearable" value="{{last_name}}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label" for="inputEmail">Nombre de Empresa o Entidad</label>
+                <div class="col-lg-9">
+                    <input name="business_name" type="text" placeholder="(opcional)" id="inputEmail" class="form-control clearable" value="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label" for="inputEmail">Dirección</label>
+                <div class="col-lg-9">
+                    <input name="address" type="text" placeholder="Nombre de la Calle y Número" id="inputEmail" class="form-control clearable" value="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label" for="inputEmail">Dirección Línea 2</label>
+                <div class="col-lg-9">
+                    <input name="address2" type="text" placeholder="Nombre del Barrio o Indicación" id="inputEmail" class="form-control clearable" value="">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-lg-3 control-label" for="inputEmail">Teléfono Fijo o Móvil *</label>
+                <div class="col-lg-9">
+                    <input name="telephone" type="text" placeholder="Nombre del Barrio o Indicación" id="inputEmail" class="form-control clearable" value="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label" for="inputEmail">Zona de Cali</label>
+                <div class="col-lg-9">
+                    <select name="zone" class="clearable">
+                        <option value="">Elegir una zona</option>
+                        <option value="norte">Norte</option>
+                        <option value="centro">Centro</option>
+                        <option value="sur">Sur</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-lg-9 col-lg-offset-2">
+
+                    <!-- We need address id for updates -->
+                    <input class="clearable" type="hidden" name="address_id" value="">
+
+                    <button data-address-id="" onclick="caShopping.delete_address( $(this));" style="display:none;" class="btn btn-warning delete-address" type="button">Borrar Dirección</button>
+
+
+                    <button class="btn btn-primary" type="submit">Guardar Dirección</button>
+                </div>
+            </div>
+        </div>
+
+    </fieldset>
+</form>

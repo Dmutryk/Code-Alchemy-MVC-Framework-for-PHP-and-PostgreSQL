@@ -1,0 +1,304 @@
+{
+
+    "main-menu-tags": {
+
+        "one" : {
+            "start" : "<ul id=\"main-menu\" class=\"main-menu\">",
+            "nest": "<ul(>|s)",
+            "end": "<\\/ul>"
+
+        },
+
+        "two" : {
+            "start" : "<div class=\"nav-container\">",
+            "nest": "<div",
+            "end": "<\\/div>"
+
+        },
+
+        "three" : {
+            "start" : "<nav id=\"navigation\" class=\"([a-zA-Z0-9_-]+)\">",
+            "nest": "<nav",
+            "end": "<\\/nav>"
+
+        }
+
+
+    },
+
+    "replacements": [
+
+        {
+
+            "regex": "/src=\"content\\/img/",
+
+            "replacement": "src=\"<?=$theme_root?>content/img"
+        },
+
+        {
+
+            "regex": "/src=\"media/",
+
+            "replacement": "src=\"<?=$theme_root?>media"
+        },
+
+
+        {
+
+            "regex": "/href=\"bower_components/",
+
+            "replacement": "href=\"<?=$theme_root?>bower_components"
+        },
+
+        {
+
+            "regex": "/src=\"bower_components/",
+
+            "replacement": "src=\"<?=$theme_root?>bower_components"
+        },
+
+        {
+
+            "regex": "/href=\"fonts/",
+
+            "replacement": "href=\"<?=$theme_root?>fonts"
+        },
+
+        {
+
+            "regex" : "/url\\(images/",
+
+            "replacement": "url(<?=$theme_root?>images"
+        },
+
+        {
+
+            "regex" : "/href=\"\\.\\.\\/pages\\//",
+
+            "replacement": "href=\"\\/"
+        },
+
+        {
+            "regex" : "/\\.html/",
+
+            "replacement": ""
+
+        },
+
+        {
+
+            "regex": "/src=\"\\.\\.\\/\\.\\.\\/\\.\\.\\/\\.\\.\\/js/",
+
+            "replacement": "src=\"<?=$theme_root?>js"
+
+        },
+        {
+
+            "regex": "/src=\"\\.\\.\\/\\.\\.\\/\\.\\.\\/js/",
+
+            "replacement": "src=\"<?=$theme_root?>js"
+
+        },
+        {
+
+            "regex": "/href=\"\\.\\.\\/\\.\\.\\/\\.\\.\\/css/",
+
+
+            "replacement": "href=\"<?=$theme_root?>css"
+        },
+
+        {
+
+            "regex": "/href=\"\\.\\.\\/\\.\\.\\/\\.\\.\\/\\.\\.\\/css/",
+
+
+            "replacement": "href=\"<?=$theme_root?>css"
+        },
+        {
+
+            "regex": "/href=\"includes/",
+
+            "replacement":"href=\"<?=$theme_root?>css"
+        },
+
+        {
+
+            "regex": "/href=\"custom-icons/",
+
+            "replacement":"href=\"<?=$theme_root?>custom-icons"
+        },
+
+        {
+
+            "regex": "/href=\"images/",
+
+            "replacement":"href=\"<?=$theme_root?>images"
+        },
+
+        {
+
+            "regex": "/src=\"neko-framework/",
+
+            "replacement":"src=\"<?=$theme_root?>neko-framework"
+        },
+
+
+
+        {
+
+            "regex": "/href=\"neko-framework/",
+
+            "replacement":"href=\"<?=$theme_root?>neko-framework"
+        },
+
+
+
+        {
+
+            "regex": "/href=\"js/",
+
+            "replacement":"href=\"<?=$theme_root?>js"
+        },
+
+
+
+        {
+
+            "regex": "/href=\"css/",
+
+            "replacement":"href=\"<?=$theme_root?>css"
+        },
+
+        {
+            "regex" : "/href=\"img/" ,
+
+            "replacement": "href=\"<?=$theme_root?>img"
+
+        },
+
+        {
+            "regex": "/src=\"img/" ,
+
+            "replacement":  "src=\"<?=$theme_root?>img"
+        },
+
+        {
+            "regex": "/src=\"system/" ,
+
+            "replacement":  "src=\"<?=$theme_root?>system/"
+        },
+
+        {
+            "regex": "/href=\"system/" ,
+
+            "replacement":  "href=\"<?=$theme_root?>system/"
+        },
+
+        {
+            "regex": "/src='img/" ,
+
+            "replacement":  "src='<?=$theme_root?>img"
+        },
+
+        {
+            "regex": "/src=\"js/" ,
+
+            "replacement":  "src=\"<?=$theme_root?>js"
+        },
+
+        {
+            "regex" : "/src=\"bundles/" ,
+
+            "replacement":  "src=\"<?=$theme_root?>bundles"
+        },
+
+        {
+            "regex":  "/src='js/" ,
+
+            "replacement":  "src='<?=$theme_root?>js"
+        },
+
+        {
+            "regex": "/poster='img/" ,
+
+            "replacement":  "poster='<?=$theme_root?>img"
+        },
+
+        {
+            "regex": "/href=\"assets/" ,
+
+            "replacement":  "href=\"<?=$theme_root?>assets"
+        },
+
+        {
+            "regex": "/href=\"external/" ,
+
+            "replacement":  "href=\"<?=$theme_root?>external"
+        },
+
+        {
+            "regex": "/src=\"external/" ,
+
+            "replacement":  "src=\"<?=$theme_root?>external"
+        },
+
+        {
+            "regex": "/src=\"images/" ,
+
+            "replacement": "src=\"<?=$theme_root?>images"
+        },
+
+        {
+            "regex": "/src=\"assets/",
+
+            "replacement": "src=\"<?=$theme_root?>assets"
+        },
+
+        {
+            "regex" : "/href=\"lib/" ,
+
+            "replacement": "href=\"<?=$theme_root?>lib"
+        },
+
+        {
+
+            "regex": "/src=\"lib/",
+
+            "replacement" : "src=\"<?=$theme_root?>lib"
+        },
+
+        {
+
+            "regex": "/href=\"stylesheets/",
+
+            "replacement" : "href=\"<?=$theme_root?>stylesheets"
+        },
+
+        {
+
+            "regex": "/src=\"javascripts/",
+
+            "replacement" : "src=\"<?=$theme_root?>javascripts"
+        },
+
+
+        {
+
+            "regex": "/href=\"apple/",
+
+            "replacement" : "href=\"<?=$theme_root?>apple"
+        },
+
+
+        {
+
+            "regex": "/href=\"favicon/",
+
+            "replacement" : "href=\"<?=$theme_root?>favicon"
+        }
+
+
+    ]
+
+
+}

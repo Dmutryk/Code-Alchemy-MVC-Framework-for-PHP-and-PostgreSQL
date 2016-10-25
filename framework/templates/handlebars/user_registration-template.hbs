@@ -1,0 +1,56 @@
+<div class="col-lg-8">
+    <h1>{{this.get_name}}</h1>
+    <div class="well bs-component">
+        <form id="{{this.get_name}}-form" class="form-horizontal">
+            <fieldset class="">
+                <legend>Complete this form to create your account</legend>
+
+                <div class="slide-toggle">
+                    <!-- Form Group Leader provides an insertion point -->
+                    <div class="form-group-leader"></div>
+                    <!-- First name -->
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="first_name">First Name</label>
+                        <div class="col-lg-10">
+                            <input type="text" placeholder="First name" id="first_name" class="form-control xo-validate presence min-4 saveable-data">
+                        </div>
+                    </div>
+                    <!-- Last name -->
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="last_name">Last Name</label>
+                        <div class="col-lg-10">
+                            <input type="text" placeholder="Last name" id="last_name" class="form-control xo-validate presence min-4 saveable-data">
+                        </div>
+                    </div>
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="email">Email</label>
+                        <div class="col-lg-10">
+                            <input type="text" placeholder="Email" id="email" class="form-control xo-validate presence email saveable-data">
+                        </div>
+                    </div>
+                    <!-- Password -->
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="password">Password</label>
+                        <div class="col-lg-10">
+                            <input type="password" id="password" class="form-control xo-validate presence min-6 saveable-data">
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="form-group alerts-here">
+
+                </div>
+
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <button class="btn btn-default">Cancel</button>
+                        <button id="{{this.get_name}}-submit" class="btn btn-primary" type="submit">Submit</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    <div class="btn btn-primary btn-xs" id="source-button" style="display: none;">&lt; &gt;</div>
+    </div>
+</div>

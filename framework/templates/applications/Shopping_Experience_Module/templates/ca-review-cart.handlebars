@@ -1,0 +1,64 @@
+<!-- Review Cart for Checkout -->
+<div
+        id="review_cart"
+        class="review-cart step-2"
+        data-is-ready="{{cart_meets_minimum}}"
+        data-cart-minimum="{{store_settings.minimum_order}}"
+        data-unready-action="scroll-here"
+        data-unready-message="Para realizar un pedido necesitas comprar por lo menos de valor {{store_settings.formatted_minimum_order_amount}}"
+        >
+
+    <div class="row {{minimum_warning_class}} alert-container">
+        <div class="col-lg-12">
+            <div class="alert alert-warning">
+                <p><i class="fa fa-warning fa-2x"></i>&nbsp;
+                    Para realizar el pedido, necesitas comprar a la vez de valor minimum {{store_settings.formatted_minimum_order_amount}}</p>
+            </div>
+        </div>
+    </div>
+    <table class="table table-hover ">
+        <thead>
+        <tr>
+            <th></th>
+            <th>&nbsp;</th>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Costo</th>
+            <th>Total de Producto</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each items}}
+            <tr class="info center cart-item" data-item-id="{{item_id}}">
+
+                <!-- remove item from cart -->
+                <td>
+                    <a class="fg-hb-brown" onclick="return caShopping.remove_from_cart( '{{item_id}}', $(this) );" href="#">
+                        <i class="fa fa-trash fa-2x"></i>
+                    </a>
+                </td>
+                <td><img style="max-width: 100px;" src="{{image_filename_url}}"></td>
+                <td>{{item}}</td>
+                <td><input onchange="caShopping.change_quantity_for( '{{item_id}}', parseInt($(this).val()) )" onkeyup="hierbaBuena.change_quantity_for( '{{item_id}}', parseInt($(this).val()) )" type="number" value="{{quantity}}"></td>
+                <td>{{item_affixed.formatted_price}} / {{item_affixed.unit_quantity}} {{item_affixed.unit}}</td>
+                <td class="formatted-item-total">{{formatted_total}}</td>
+            </tr>
+
+        {{/each}}
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>Total de Carrito:</td>
+            <td class="display-total">{{display_total}}</td>
+        </tr>
+  </tbody>
+    </table>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <a href="/tienda" class="btn btn-default">Seguir comprando</a>
+        </div>
+    </div>
+</div>

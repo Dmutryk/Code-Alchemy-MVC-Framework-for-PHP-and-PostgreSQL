@@ -1,0 +1,6 @@
+index.php
+app/xml/*
+app/config/*
+vendor/*
+bower_components/*
+.idea/*

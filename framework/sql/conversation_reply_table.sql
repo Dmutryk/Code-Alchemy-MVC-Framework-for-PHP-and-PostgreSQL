@@ -1,0 +1,16 @@
+CREATE TABLE `__database_name__`.`__table_name__`(
+`id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+`reply` text,
+`user_id` int(11) NOT NULL,
+`ip` varchar(30) NOT NULL,
+`time` int(11) NOT NULL,
+`conversation_id` int(11) NOT NULL,
+  `created_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  `created_by` INT(11),
+  `last_modified_date` DATETIME,
+  `last_modified_by` INT(11),
+  `is_deleted` TINYINT(1) DEFAULT 0,
+  `deleted_date` DATETIME,
+  `deleted_by` INT,
+FOREIGN KEY (user_id) REFERENCES user(id),
+FOREIGN KEY (conversation_id) REFERENCES conversation(id));

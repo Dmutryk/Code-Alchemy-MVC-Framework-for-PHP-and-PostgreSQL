@@ -1,0 +1,10 @@
+<tr>
+    <td class="hidden-xs">
+        <img style="max-width: 65px" src="{{item_affixed.website_image_affixed.image_filename_url}}" alt="{{item_affixed.website_image_affixed.title}}"></td>
+    <td>{{item_affixed.name}}</td>
+    <td>
+        <input onchange="caShopping.change_quantity_for( '{{item_id}}', parseInt($(this).val()) )" onkeyup="hierbaBuena.change_quantity_for( '{{item_id}}', parseInt($(this).val()) )" type="number" value="{{quantity}}">
+    </td>
+    <td>{{item_affixed.formatted_price}}</td>
+    <td>{{formatted_total}}</td>
+</tr>
