@@ -15,7 +15,7 @@ class Envato_API_Client extends Alchemist {
     /**
      * @var string Base URL for calling Envato API
      */
-    private $baseUrl = 'https://api.envato.com/v1/';
+    private $baseUrl = 'https://api.envato.com/v1';
 
     /**
      * @var string Bearer Token
